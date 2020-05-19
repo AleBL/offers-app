@@ -15,6 +15,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails", "~> 5.2"
+  gem "ffaker", "~> 2.14"
+  gem "shoulda-matchers", "~> 4.3"
+  gem "rspec-rails", "~> 4.0"
+  gem "pry", "~> 0.13.1"
 end
 
 group :development do
@@ -23,10 +28,8 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem "factory_bot_rails", "~> 5.2"
-  gem "ffaker", "~> 2.14"
   gem 'selenium-webdriver'
-  gem "rspec-rails", "~> 4.0"
+  gem "simplecov", "~> 0.18.5"
   gem 'webdrivers'
 end
 
