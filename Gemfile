@@ -23,7 +23,10 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
+  gem "factory_bot_rails", "~> 5.2"
+  gem "ffaker", "~> 2.14"
   gem 'selenium-webdriver'
+  gem "rspec-rails", "~> 4.0"
   gem 'webdrivers'
 end
 
