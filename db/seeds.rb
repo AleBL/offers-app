@@ -16,5 +16,5 @@ amazon_offer.save
 netflix_offer = Offer.new(advertiser_name: "Netflix", url: "https://www.netflix.com", 
 description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the industry's standard dummy text
 ver since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-premium: true, starts_at: Date.current)
+premium: true, starts_at: Date.current, ends_at: Date.current)
 netflix_offer.save
