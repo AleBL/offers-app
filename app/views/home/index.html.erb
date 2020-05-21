@@ -1,16 +1,3 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="#">Offers App</a>
-  <div class="menu">
-    <% if current_user %>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
-    <% else %>
-      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %>
-
-      <%= link_to 'Sign in', new_user_session_path, class: "btn btn-success" %>
-    <% end %>
-  </div>
-</nav>
-
 <% @offers.each do |offer| %>
   <div class="offer-card">
     <b><%= offer.advertiser_name %></b>
