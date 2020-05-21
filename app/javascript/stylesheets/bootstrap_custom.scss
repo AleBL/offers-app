@@ -36,3 +36,43 @@
 @import '~bootstrap/scss/_tooltip.scss';
 @import '~bootstrap/scss/_transitions.scss';
 @import '~bootstrap/scss/_utilities.scss';
+
+.offer-card {
+  text-align: -webkit-center;
+  display: inline-grid; 
+  width: 300px;
+  height: 400px;
+  border-style: groove;
+  border-color: hsla(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 30px 20px;
+  box-shadow: 10px -5px 13px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(var(--lightGrey), 1);
+  background-color: aliceblue;
+}
+
+.offer-card:hover {
+  transform: scale(1.1);
+}
+
+a,a:hover {
+  color: white;
+}
+
+.premium {
+  color: white;
+  background-color: red;
+  border-color: red;
+  border-style: solid;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+
+.shop {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  border-radius: 0.5rem;
+  padding: 8px;
+  height: fit-content;
+}
