@@ -3,7 +3,7 @@ class OffersController < ApplicationController
   before_action :verify_admin!
 
   def index
-    @offers = Offer.all
+    @offers = Offer.all.order(premium: :desc)
   end
 
   def new
@@ -58,6 +58,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:advertiser_name, :url, :description, :starts_at, :ends_at, :premium, :enable)
+    params.require(:offer).permit(:advertiser_name, :url, :description, :starts_at, :ends_at, :premium, :enable, :enable_admin)
   end
 end

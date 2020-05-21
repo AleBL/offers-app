@@ -2,7 +2,7 @@ class AvailableOffers
   def available_offers
     update_status
 
-    @offers = Offer.where(enable: true).order(premium: :desc)
+    @offers = Offer.where(enable: true, enable_admin: true).order(premium: :desc)
   end
 
   private 
