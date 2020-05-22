@@ -1,0 +1,32 @@
+<br>
+
+<% @offers.each do |offer| %>
+  <div class="offer-card admin">
+    <b><%= offer.advertiser_name %></b>
+    <b><%= offer.url %></b>
+    <p><%= offer.description %></p>
+    <p>Starts: <%= offer.starts_at %></p>
+    <p>Ends: <%= offer.ends_at %></p>
+    <p>Offer <%= offer.enable ? 'Enable' : 'Disable' %></p>
+
+    <% if offer.premium %>
+      <p class="premium">Premium</p>
+    <% end %>
+
+    <div class="input-bottom">
+      <%= form_for offer, method: :put do |f| %>
+        <%= f.hidden_field :enable_admin, value: !offer.enable_admin %>
+        <%= f.submit offer.enable_admin ? 'Enable' : 'Disable', 
+          class: offer.enable_admin ? "btn btn-success" : "btn btn btn-danger" %>
+      <% end %>
+
+      <br>
+
+      <div class="input-bottom ">
+        <%= link_to 'Edit', edit_offer_path(offer), class: "btn btn-md btn-primary" %>
+        <%= link_to 'Destroy', offer_path(offer),
+            method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-md btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

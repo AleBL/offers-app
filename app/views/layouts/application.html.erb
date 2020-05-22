@@ -18,6 +18,27 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href=<%= root_path %>>Offers App</a>
+      <div class="menu">
+        <% if current_user %>
+          <% if current_user.admin? %>
+            <button class="btn btn-md btn-success">
+              <%= link_to 'New Offer', new_offer_path %>
+            </button>
+
+            <%= link_to 'Manage Offers', offers_path, class: "btn btn-primary" %>
+          <% end %>
+
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+        <% else %>
+          <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %>
+
+          <%= link_to 'Sign in', new_user_session_path, class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

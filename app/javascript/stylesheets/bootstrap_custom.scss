@@ -36,3 +36,89 @@
 @import '~bootstrap/scss/_tooltip.scss';
 @import '~bootstrap/scss/_transitions.scss';
 @import '~bootstrap/scss/_utilities.scss';
+
+.offer-card {
+  text-align: -webkit-center;
+  display: inline-grid;
+  border-style: groove;
+  border-color: hsla(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 30px 20px;
+  box-shadow: 10px -5px 13px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(var(--lightGrey), 1);
+  background-color: aliceblue;
+}
+
+.member {
+  width: 300px;
+  height: 600px;
+}
+
+.admin {
+  width: 350px;
+  height: 670px;
+}
+
+.offer-card:hover {
+  transform: scale(1.1);
+}
+
+a,a:hover {
+  color: white;
+}
+
+.premium {
+  color: white;
+  background-color: red;
+  border-color: red;
+  border-style: solid;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+
+.shop {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  border-radius: 0.5rem;
+  padding: 8px;
+  height: fit-content;
+  margin-top: auto;
+}
+
+.input-bottom {
+  margin-top: auto;
+}
+
+.div-form-offer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px 350px;
+}
+
+.field {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.field > input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.field > input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.field > input[type=submit]:hover {
+  background-color: #45a049;
+}
