@@ -1,5 +1,5 @@
 <% @offers.each do |offer| %>
-  <div class="offer-card">
+  <div class="offer-card member">
     <b><%= offer.advertiser_name %></b>
     <p><%= offer.description %></p>
 
@@ -7,6 +7,6 @@
       <p class="premium">Premium</p>
     <% end %>
 
-    <%= link_to 'Shop Now', offer.url, class: "shop" %>
+    <%= link_to 'Shop Now', offer.url, class: "shop input-bottom" %>
   </div>
 <% end %>

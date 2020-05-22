@@ -1,11 +1,7 @@
-<button class="btn btn-md btn-success">
-  <%= link_to 'New Offer', new_offer_path %>
-</button>
-
 <br>
 
 <% @offers.each do |offer| %>
-  <div class="offer-card">
+  <div class="offer-card admin">
     <b><%= offer.advertiser_name %></b>
     <b><%= offer.url %></b>
     <p><%= offer.description %></p>
@@ -17,18 +13,20 @@
       <p class="premium">Premium</p>
     <% end %>
 
-    <%= form_for offer, method: :put do |f| %>
-      <%= f.hidden_field :enable_admin, value: !offer.enable_admin %>
-      <%= f.submit offer.enable_admin ? 'Enable' : 'Disable', 
-        class: offer.enable_admin ? "btn btn-success" : "btn btn btn-danger" %>
-    <% end %>
+    <div class="input-bottom">
+      <%= form_for offer, method: :put do |f| %>
+        <%= f.hidden_field :enable_admin, value: !offer.enable_admin %>
+        <%= f.submit offer.enable_admin ? 'Enable' : 'Disable', 
+          class: offer.enable_admin ? "btn btn-success" : "btn btn btn-danger" %>
+      <% end %>
 
-    <br>
+      <br>
 
-    <div>
-      <%= link_to 'Edit', edit_offer_path(offer), class: "btn btn-md btn-primary" %>
-      <%= link_to 'Destroy', offer_path(offer),
-          method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-md btn-primary" %>
+      <div class="input-bottom ">
+        <%= link_to 'Edit', edit_offer_path(offer), class: "btn btn-md btn-primary" %>
+        <%= link_to 'Destroy', offer_path(offer),
+            method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-md btn-primary" %>
+      </div>
     </div>
   </div>
 <% end %>
